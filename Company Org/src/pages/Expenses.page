@@ -1,0 +1,56 @@
+<apex:page standardStylesheets="false">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="{!URLFOR($Resource.expenseTracker,'/bootstrap.min.css')}" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="{!URLFOR($Resource.expenseTracker,'/bootstrap.min.js')}"></script>
+    <script src="{!URLFOR($Resource.expenseTracker,'/handlebars-v4.0.11.js')}"></script>
+    <script src="{!URLFOR($Resource.expenseTracker,'/expense.js')}"></script>
+    <link href="{!URLFOR($Resource.expenseTracker,'/expense.css')}" rel="stylesheet"/>
+    <style>
+        @keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+    </style>
+    <div style="position: fixed;left: 0px;top: 0px;height: 100%;width: 100%;background: rgba(0,0,0,.1);display:none;z-index:1;" id="loading">
+        <img src="{!URLFOR($Resource.expenseTracker,'/Spin.svg')}" style="position: absolute;top: calc(50% - 100px);left: calc(50% - 100px);"/>
+    </div>
+    <div id="divCreateExpense">
+        <c:createExpenses />
+    </div>
+    <div id="divDetailExpense" style="display:none;">
+        <c:detailExpenses />
+    </div>
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page controller="TeamWorkSetUp" tabStyle="Concretian__c">
+    <apex:form >
+        <apex:pageMessages id="msg"/>
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Peoples">
+                <apex:commandButton value="Fetch Concretions" action="{!fetchPeople}"/> 
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Time Entries">
+                <apex:commandButton value="Fetch Time Entries" action="{!fetchTimeEntries}"/> 
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

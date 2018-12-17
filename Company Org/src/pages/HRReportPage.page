@@ -1,0 +1,88 @@
+<apex:page standardController="Hr_Report__c" extensions="HRReportCtlr" contenttype="application/vnd.ms-excel#Monthly timesheet report.xls" showheader="false"> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    </head>
+
+	<apex:pageBlock title="Teamwork time sheet">
+	    Date: 
+		<apex:outputText value=" {0, date, dd'/'MM'/'yyyy}">
+            <apex:param value="{!reportData.fromDate}" />
+        </apex:outputText>
+        To 
+        <apex:outputText value=" {0, date, dd'/'MM'/'yyyy}">
+            <apex:param value="{!reportData.toDate}" />
+        </apex:outputText>.
+        <apex:pageBlockTable value="{!reportData.lstUserTimeSheet}" var="userTimeSheet">
+            <apex:column headervalue="Concretian" value="{!userTimeSheet.userName}"/>
+            
+            <apex:variable value="{!userTimeSheet.lstTimeEntry1.day}" var="lstTimeEntry1Day"></apex:variable>
+			<apex:column headerValue="{!lstTimeEntry1Day}" value="{!userTimeSheet.lstTimeEntry1.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry2.day}" var="lstTimeEntry2Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry2Day}" value="{!userTimeSheet.lstTimeEntry2.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry3.day}" var="lstTimeEntry3Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry3Day}" value="{!userTimeSheet.lstTimeEntry3.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry4.day}" var="lstTimeEntry4Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry4Day}" value="{!userTimeSheet.lstTimeEntry4.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry5.day}" var="lstTimeEntry5Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry5Day}" value="{!userTimeSheet.lstTimeEntry5.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry6.day}" var="lstTimeEntry6Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry6Day}" value="{!userTimeSheet.lstTimeEntry6.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry7.day}" var="lstTimeEntry7Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry7Day}" value="{!userTimeSheet.lstTimeEntry7.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry8.day}" var="lstTimeEntry8Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry8Day}" value="{!userTimeSheet.lstTimeEntry8.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry9.day}" var="lstTimeEntry9Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry9Day}" value="{!userTimeSheet.lstTimeEntry9.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry10.day}" var="lstTimeEntry10Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry10Day}" value="{!userTimeSheet.lstTimeEntry10.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry11.day}" var="lstTimeEntry11Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry11Day}" value="{!userTimeSheet.lstTimeEntry11.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry12.day}" var="lstTimeEntry12Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry12Day}" value="{!userTimeSheet.lstTimeEntry12.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry13.day}" var="lstTimeEntry13Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry13Day}" value="{!userTimeSheet.lstTimeEntry13.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry14.day}" var="lstTimeEntry14Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry14Day}" value="{!userTimeSheet.lstTimeEntry14.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry15.day}" var="lstTimeEntry15Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry15Day}" value="{!userTimeSheet.lstTimeEntry15.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry16.day}" var="lstTimeEntry16Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry16Day}" value="{!userTimeSheet.lstTimeEntry16.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry17.day}" var="lstTimeEntry17Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry17Day}" value="{!userTimeSheet.lstTimeEntry17.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry18.day}" var="lstTimeEntry18Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry18Day}" value="{!userTimeSheet.lstTimeEntry18.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry19.day}" var="lstTimeEntry19Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry19Day}" value="{!userTimeSheet.lstTimeEntry19.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry20.day}" var="lstTimeEntry20Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry20Day}" value="{!userTimeSheet.lstTimeEntry20.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry21.day}" var="lstTimeEntry21Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry21Day}" value="{!userTimeSheet.lstTimeEntry21.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry22.day}" var="lstTimeEntry22Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry22Day}" value="{!userTimeSheet.lstTimeEntry22.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry23.day}" var="lstTimeEntry23Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry23Day}" value="{!userTimeSheet.lstTimeEntry23.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry24.day}" var="lstTimeEntry24Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry24Day}" value="{!userTimeSheet.lstTimeEntry24.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry25.day}" var="lstTimeEntry25Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry25Day}" value="{!userTimeSheet.lstTimeEntry25.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry26.day}" var="lstTimeEntry26Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry26Day}" value="{!userTimeSheet.lstTimeEntry26.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry27.day}" var="lstTimeEntry27Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry27Day}" value="{!userTimeSheet.lstTimeEntry27.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry28.day}" var="lstTimeEntry28Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry28Day}" value="{!userTimeSheet.lstTimeEntry28.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry29.day}" var="lstTimeEntry29Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry29Day}" value="{!userTimeSheet.lstTimeEntry29.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry30.day}" var="lstTimeEntry30Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry30Day}" value="{!userTimeSheet.lstTimeEntry30.totalHrsSum}"/>
+			<apex:variable value="{!userTimeSheet.lstTimeEntry31.day}" var="lstTimeEntry31Day"></apex:variable>
+			<apex:column headervalue="{!lstTimeEntry31Day}" value="{!userTimeSheet.lstTimeEntry31.totalHrsSum}"/>
+			
+			<!--<apex:repeat value="{!userTimeSheet.lstTimeEntry}" var="timeEntry">-->
+			<!--    <apex:column headervalue="Concretian">-->
+			<!--        {!timeEntry.totalHrsSum}-->
+			<!--    </apex:column>-->
+			<!--</apex:repeat>-->
+		</apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:page>
