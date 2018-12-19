@@ -1,6 +1,6 @@
 /**
  * Name : CreateExpense_Ctrl
- * Author : Arun Jain concret11
+ * Author : Arun Jain concret11.
  * Date : 01-Nov-2017
  * Description : It will create the Expense in AWS DynamoDB
 **/
